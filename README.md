@@ -73,26 +73,30 @@ Optimize your model in order to achieve a target predictive accuracy higher than
 4. Design a neural network model, taking into account any modifications that will optimize the model to achieve higher than 75% accuracy.
 5. Save and export your results to an HDF5 file, and name it `AlphabetSoupCharity_Optimization.h5`.
 
-### Step 4: Write a Report on the Neural Network Model
+### Step 4: Report on the Neural Network Model
 
-For this part of the Challenge, you’ll write a report on the performance of the deep learning model you created for AlphabetSoup.
+The target variable for the model will be "IS_SUCCESSFUL". This column has values of 1 and 0 which helps us determine if the charity fund is successful (1) or not successful(0). After columns "EIN" and "Name" are dropped, the remaining columns are features for the model.
 
-The report should contain the following:
+Compile, Train, and Evaluate the Model
+Use TensorFlow to design a neural network, or deep learning model, to create a binary classification model that can predict if the organization will be successful based on the features in the dataset. Compile, train, and evaluate the binary classification model to calculate the model’s loss and accuracy.
 
-1. **Overview** of the analysis: Explain the purpose of this analysis.
+Run 1 : Use neural network model with 2 hidden layers. 1st layer with 99 nodes and second layer with 50. Using 100 epochs.
 
-2. **Results**: Using bulleted lists and images to support your answers, address the following questions.
+​ This model resulted in Loss: 0.7171136736869812, Accuracy: 0.5292128324508667. 
 
-  * Data Preprocessing
-    * What variable(s) are considered the target(s) for your model?
-    * What variable(s) are considered to be the features for your model?
-    * What variable(s) are neither targets nor features, and should be removed from the input data?
-  * Compiling, Training, and Evaluating the Model
-    * How many neurons, layers, and activation functions did you select for your neural network model, and why?
-    * Were you able to achieve the target model performance?
-    * What steps did you take to try and increase model performance?
+Run 2: Use neural network model with 3 hidden layers. 1st layer with 50 nodes, second layer with 25 and third layer with 10. Using 100 epochs.
 
-3. **Summary**: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
+​ This model resulted in Loss: 0.5524564981460571, Accuracy: 0.7307288646697998. Accuracy improved quite significantly and there was a large decrease in loss. 
+
+Run 3: Use neural network model with 4 hidden layers distributed in the following way 50, 25, 10, and 5. Using 100 epochs. 
+
+​ This model resulted in Loss: 0.5523684024810791, Accuracy: 0.7290962338447571. Decreased accuracy and increased loss.
+
+The closest model was run 2 which is the file that is saved to the github "AlphabetSoupCharity_Optimization.h5". It did not achieve the desired accuracy of 75% but got closest.
+
+Summary:
+
+The results of each of the model attempts did not improve the accuracy enough to reach the desired accuracy rate of 75%. In order to improve the model, it would be recommended to check for and remove outliers. Also, would recommend looking at changing the number of features.
 
 - - -
 
