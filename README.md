@@ -75,34 +75,26 @@ Optimize your model in order to achieve a target predictive accuracy higher than
 
 ### Step 4: Report on the Neural Network Model
 
-The target variable for the model will be "IS_SUCCESSFUL". This column has values of 1 and 0 which helps us determine if the charity fund is successful (1) or not successful(0). After columns "EIN" and "Name" are dropped, the remaining columns are features for the model.
+Report on the Neural Network Model
+The target variable for the model will be "IS_SUCCESSFUL". This column has values of 1 and 0 which helps us determine if the charity fund is successful (1) or not successful (0). After columns "EIN" and "Name" are dropped, the remaining columns are features for the model.
 
-Compile, Train, and Evaluate the Model
-Use TensorFlow to design a neural network, or deep learning model, to create a binary classification model that can predict if the organization will be successful based on the features in the dataset. Compile, train, and evaluate the binary classification model to calculate the model’s loss and accuracy.
+TASK: Compile, train, and evaluate the model using TensorFlow to design a neural network/deep learning model; create a binary classification model that can predict if the organization will be successful based on the features in the dataset. Compile, train, and evaluate the binary classification model to calculate the model’s loss and accuracy.
 
-Run 1 : Use neural network model with 2 hidden layers. 1st layer with 99 nodes and second layer with 50. Using 100 epochs.
-
-​ This model resulted in Loss: 0.7171136736869812, Accuracy: 0.5292128324508667. 
-
+Run 1: Use neural network model with 2 hidden layers. 1st layer with 99 nodes and second layer with 50. Using 100 epochs.
+ This model resulted in Loss: 0.5548303723335266, Accuracy: 0.7281632423400879.
 Run 2: Use neural network model with 3 hidden layers. 1st layer with 50 nodes, second layer with 25 and third layer with 10. Using 100 epochs.
+ This model resulted in Loss: 0.5522181987762451, Accuracy: 0.7308454513549805. Accuracy improved slightly and there was a super small decrease in loss.
 
-​ This model resulted in Loss: 0.5524564981460571, Accuracy: 0.7307288646697998. Accuracy improved quite significantly and there was a large decrease in loss. 
+Run 3: Use neural network model with 4 hidden layers distributed in the following way 50, 25, 10, and 5. Using 100 epochs.
+ This model resulted in Loss: 0.5533269643783569, Accuracy: 0.728863000869751. Decreased accuracy and increased loss.
 
-Run 3: Use neural network model with 4 hidden layers distributed in the following way 50, 25, 10, and 5. Using 100 epochs. 
+Run 4: Rerun the hidden layers from Run 2 but with 200 epochs.
+ This model resulted in Loss: 0.5548874139785767, Accuracy: 0.731195330619812. A negligible improvement in accuracy but increased loss.
 
-​ This model resulted in Loss: 0.5523684024810791, Accuracy: 0.7290962338447571. Decreased accuracy and increased loss.
-
-The closest model was run 2 which is the file that is saved to the github "AlphabetSoupCharity_Optimization.h5". It did not achieve the desired accuracy of 75% but got closest.
+The closest model was run 2/run 4 with either 100 or 200 epochs; it did not achieve the desired accuracy of 75% but got closest.
+All optimization attempts are saved in "AlphabetSoupCharity_Optimization.h5”.
 
 Summary:
 
-The results of each of the model attempts did not improve the accuracy enough to reach the desired accuracy rate of 75%. In order to improve the model, it would be recommended to check for and remove outliers. Also, would recommend looking at changing the number of features.
+The results of each of the model attempts did not improve the accuracy enough to reach the desired accuracy rate of 75%. In order to improve the model, it would be recommended to check for and remove outliers. Another consideration, that may affect results and accuracy, would be looking at changing the number of features.
 
-- - -
-
-## Rubric
-
-[Unit 21 - Deep Learning Homework Rubric - Charity Funding Predictor](https://docs.google.com/document/d/1SLOROX0lqZwa1ms-iRbHMQr1QSsMT2k0boO9YpFBnHA/edit?usp=sharing)
-
-___
-© 2021  Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.	
