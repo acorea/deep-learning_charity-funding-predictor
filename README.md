@@ -91,10 +91,10 @@ Run 3: Use neural network model with 4 hidden layers distributed in the followin
 Run 4: Rerun the hidden layers from Run 2 but with 200 epochs.
  This model resulted in Loss: 0.5548874139785767, Accuracy: 0.731195330619812. A negligible improvement in accuracy but increased loss.
 
-The closest model was run 2/run 4 with either 100 or 200 epochs; ". It did not achieve the desired accuracy of 75% but got closest.
+The closest model was run 2/run 4 with either 100 or 200 epochs; it did not achieve the desired accuracy of 75% but got closest.
 All optimization attempts are saved in "AlphabetSoupCharity_Optimization.h5”.
 
 Summary:
 
-The results of each of the model attempts did not improve the accuracy enough to reach the desired accuracy rate of 75%. In order to improve the model, it would be recommended to check for and remove outliers. Another consideration, that may effect results and accuracy, would be looking at changing the number of features.
+The results of each of the model attempts did not improve the accuracy enough to reach the desired accuracy rate of 75%. In order to improve the model, it would be recommended to check for and remove outliers. Another consideration, that may affect results and accuracy, would be looking at changing the number of features.
 
